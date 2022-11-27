@@ -69,7 +69,7 @@ class BleakConnection:
 
     async def async_get_connection(self):
         ble_device = bluetooth.async_ble_device_from_address(
-            self._hass, self._mac, connectable=True
+            self._hass, self._mac, connectable=False
         )
         if ble_device:
             self.rssi = ble_device.rssi
